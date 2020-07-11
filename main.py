@@ -1,8 +1,5 @@
 import tkinter as tk
 
-key = list(range(27))
-
-
 def encrypt(text):
     encrypted_text = ""
     for letter in text:
@@ -19,6 +16,7 @@ def decrypt(text):
     for letter in text:
         letter_num = ord(letter) - 96
         decrypted_text += chr(ord(letter) - 2)
+
     output.delete('1.0', tk.END)
     output.insert(1.0, decrypted_text)
 
